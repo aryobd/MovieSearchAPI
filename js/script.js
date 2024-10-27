@@ -3,7 +3,7 @@ function searchMovies() {
         url      : 'http://omdbapi.com',
         type     : 'get',
         dataType : 'json',
-        data: {
+        data     : {
             'apikey' : '9b90f353',
             's'      : $('#search-input').val()
         },
