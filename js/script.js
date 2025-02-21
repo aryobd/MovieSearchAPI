@@ -1,10 +1,13 @@
+const OMDB_API_URL = 'http://omdbapi.com';
+const API_KEY = '9b90f353';
+
 function searchMovies() {
     $.ajax({
-        url      : 'http://omdbapi.com',
+        url      : OMDB_API_URL, // 'http://omdbapi.com',
         type     : 'get',
         dataType : 'json',
         data     : {
-            'apikey' : '9b90f353',
+            'apikey' : API_KEY, // '9b90f353',
             's'      : $('#search-input').val()
         },
         success  : function(result) {
@@ -47,11 +50,11 @@ function searchMovies() {
 
 function movieDetail(imdbID) {
     $.ajax({
-        url      : 'http://omdbapi.com',
+        url      : OMDB_API_URL, // 'http://omdbapi.com',
         type     : 'get',
         dataType : 'json',
         data     : {
-            'apikey' : '9b90f353',
+            'apikey' : API_KEY, // '9b90f353',
             'i'      : imdbID // $(this).data('id')
         },
         success  : function(result) {
